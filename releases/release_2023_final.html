@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="./img/favicon-organ.png" type="image/gif" sizes="16x16">
+<title>Summercamp CG</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+    body,h1,h2{font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    p {line-height: 2}
+    .bgimg, .bgimg2 {
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    .bgimg {background-image: url("./img/welcome.jpg")}
+    /* .w3-row-padding img {margin-bottom: 2px} */
+
+    .w3-bottom {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: transform 0.3s;
+            transform: translateY(100%);
+        }
+</style>
+</head>
+<body>
+
+<!-- Header / Home-->
+<header class="w3-display-container w3-wide bgimg " id="home">
+    <div class="w3-display-middle w3-text-white w3-center" style="top:170px">
+        <h1 class="w3-xxxlarge" style="text-shadow:2px 2px 0 #222"><b>Summercamp CG</h1>
+    </div>
+</header>
+
+<!-- Navbar -->
+<div class="w3-bottom w3-hide-small">
+    <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+        <a href="#home" style="width:25%" class="w3-bar-item w3-button">Domů</a>
+        <a href="#gallery" style="width:25%" class="w3-bar-item w3-button">Galerie</a>
+        <a href="#about" style="width:25%" class="w3-bar-item w3-button">O nás</a>
+        <a href="#contact" style="width:25%" class="w3-bar-item w3-button">Kontakt</a>
+    </div>
+</div>
+
+<!-- Actualities -->
+<div class="w3-container w3-padding-64 w3-gray" id="gallery">
+    <div class="w3-content w3-center w3-xlarge">
+        <h1 class="w3-text-sand">Vítejte na stránkách Summercampu Církevního gymnázia!</h1>
+        <br>
+        <div class="w3-container w3-sand">
+            <h1>SummerCamp 2023</h1>
+        </div>
+        <!-- E format pictures row 1 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="./img/show-E-01.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Červení</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="./img/show-E-00.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Vedoucí</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="./img/show-E-02.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Modří</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- E format pictures row 2 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-03.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Zelení</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-04.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Oranžoví</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- D format pictures row 3 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-D-00.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-01.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-02.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- A format pictures row 4 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-A-00.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Luštění únikovky</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-A-01.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Poklad</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- B format pictures row 5 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-B-00.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-B-01.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-B-02.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- E format pictures row 6 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-05.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Druidi</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-06.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Kulturisti</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- D format pictures row 7 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-D-03.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-04.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-05.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- E format pictures row 8 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-07.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Zákaz vstupu</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-E-08.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Strategové celotáborovky</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- B format pictures row 9 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-B-03.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-B-04.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-B-05.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- E format pictures row 10 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-E-09.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-E-10.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-E-11.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- D format pictures row 11 -->
+        <!-- <div class="w3-row-padding w3-margin-top w3-text-sand"> -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-third">
+                <img src="./img/show-D-06.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-07.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+            <div class="w3-third">
+                <img src="./img/show-D-08.jpg" style="width:100%">
+                <div class="w3-container">
+                </div>
+            </div>
+        </div>
+        <!-- C format pictures row 12 -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-C-00.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Ohnivý rituál</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card">
+                    <img src="./img/show-C-01.jpg" style="width:100%">
+                    <div class="w3-container">
+                        <h5>Uvězněni navěky</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Link na galerii -->
+        <div class="w3-row-padding w3-margin-top w3-text-sand">
+            <h2>Pro více fotek stačí kliknout na následující logo!</h2>
+            <a href="https://photos.app.goo.gl/HPsrWMee6NEFfWnc9?fbclid=IwAR2Ve8dhSpmcfuFwaXGvwXND2kcWoeB5DxgFYrOa2kLkW0JWOeM97ceTPdg" target="_blank">
+                <img src="./img/logo-google-photos.png" style="width:25%">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- About us section -->
+<div class="w3-container w3-padding-64 w3-pale-red w3-center w3-wide" id="about">
+    <h1>O nás</h1>
+    <div class="w3-row">
+        <div>
+            <h2>Kdo jsme?</h2>
+            <p class="w3-margin">Jsme parta absolventů a studentů Církevního gymnázia v Plzni, 
+            která prožila mnoho příjemných chvil na tábořišti jižně od Nepomuka a stejné 
+            zážitky nyní chce předat mladším studentům.</p>
+        </div>
+        <div>
+            <h2>Jaký smysl má náš tábor?</h2>
+            <p class="w3-margin">Náš letní tábor je příležitostí spřátelit se napříč třídami a ročníky, 
+            osvojit si mnoho nových táborových dovedností, procvičit si angličtinu nebo poznat nová místa.</p>
+        </div>
+    </div> 
+</div>
+
+<!-- Contact section -->
+<div class="w3-container w3-padding-64 w3-gray w3-text-sand w3-center w3-wide" id="contact">
+    <h1>Kontakt</h1>
+    <div class="w3-row">
+        <div>
+            <p class="w3-margin">jakubsedivy@atlas.cz</p>
+            <p class="w3-margin">+420 605 246 446</p>
+        </div>
+    </div> 
+    <div class="w3-row">
+        <div>
+            <h2>Jak zaslat poštu?</h2>
+            <p class="w3-margin">jméno dítěte - Tábor MOP, k panu Františku Holému - Polánka E22, 335 01 p. Nepomuk 1</p>
+        </div>
+    </div> 
+    <div class="w3-row">
+        <div>
+            <h2>Jak se k nám dostat?</h2>
+            <p class="w3-margin">1) kde nechat auto, 2) tábor</p>
+        </div>
+    </div> 
+    <iframe style="border:none" src="https://frame.mapy.cz/s/hulepetonu" width="75%" height="500vh" frameborder="0"></iframe>
+</div>
+
+<!-- Sponsor's logos -->
+<div class="w3-row">
+    <div class="w3-half">
+        <!-- <div class="w3-container w3-center w3-white "> -->
+        <div class="w3-container image-container w3-center">
+            <p><img src="./img/logo-mesto-plzen-00.jpg" style="width:260px;height:100px" alt="Město Plzeň"></p>
+        </div>
+    </div>
+    <div class="w3-half">
+        <div class="w3-container w3-center w3-white ">
+            <p><img src="./img/logo-cg.png" style="width:104px;height:100px" alt="Církevní gymnázium Plzeň"><br/>Církevní gymnázium Plzeň</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black ">
+    <p class="w3-small">© Filip Kresl</p> 
+</footer>
+
+<script>
+    let prevScrollPos = window.pageYOffset;
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollPos > currentScrollPos) {
+            document.querySelector(".w3-bottom").style.transform = "translateY(0)";
+        } else {
+            document.querySelector(".w3-bottom").style.transform = "translateY(100%)";
+        }
+        prevScrollPos = currentScrollPos;
+    }
+</script>
+
+</body>
+</html>
